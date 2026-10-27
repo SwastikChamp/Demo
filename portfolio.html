@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swastik Soni | B.Tech First Year Student & Developer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Swastik Soni - B.Tech First Year Student at Ajeenkya DY Patil University, Web Developer, and Badminton Athlete.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons for crisp UI icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="lazy-white-theme">
+    <!-- Interactive Canvas & Background Doodles -->
+    <div class="canvas-container" aria-hidden="true">
+        <canvas id="doodleCanvas"></canvas>
+        <!-- Ambient Floating Badge Stickers (Books, Code, Badminton & Sports) -->
+        <div class="floating-stickers" id="floatingStickers">
+            <div class="sticker sticker-book" style="top: 12%; left: 4%;" title="Books & Lifelong Learning">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Study</span>
+            </div>
+            <div class="sticker sticker-code" style="top: 25%; right: 5%;" title="Clean Code & Architecture">
+                <i class="fa-solid fa-code"></i>
+                <span>&lt;Dev/&gt;</span>
+            </div>
+            <div class="sticker sticker-badminton" style="top: 48%; left: 2%;" title="Badminton Passion">
+                <i class="fa-solid fa-feather-pointed"></i>
+                <span>Smash!</span>
+            </div>
+            <div class="sticker sticker-sports" style="top: 65%; right: 4%;" title="Sports & Fitness">
+                <i class="fa-solid fa-medal"></i>
+                <span>Athletics</span>
+            </div>
+            <div class="sticker sticker-terminal" style="top: 82%; left: 5%;" title="Terminal & CLI">
+                <i class="fa-solid fa-terminal"></i>
+                <span>git push</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar-wrapper" id="navbar">
+        <nav class="navbar container">
+            <a href="#hero" class="brand-logo" id="brandLogo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-name">Swastik</span>
+                <span class="logo-dot">.</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Skills</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fa-solid fa-layer-group"></i> Projects</a></li>
+                <li><a href="#contributions" class="nav-link"><i class="fa-solid fa-code-branch"></i> Contributions</a>
+                </li>
+                <li><a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Background Doodle Motion Toggle -->
+                <button class="icon-btn" id="doodleToggleBtn" title="Toggle Background Doodle Animation"
+                    aria-label="Toggle Background Doodle Animation">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's Connect</a>
+                <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION: Photo on the Left with Quote underneath, About Me on the Right -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-grid">
+
+                <!-- LEFT CORNER: Photo & Quote -->
+                <aside class="hero-left-corner">
+                    <div class="profile-card-wrapper" id="profileCard">
+                        <!-- Profile Photo Container -->
+                        <div class="profile-frame">
+                            <div class="profile-glow"></div>
+                            <img src="assets/avatar.jpg" alt="Swastik Soni - Developer and Student" id="profileImage"
+                                class="profile-img">
+
+                            <!-- Status Pill -->
+                            <div class="status-pill">
+                                <span class="status-dot"></span>
+                                <span>Open to Opportunities</span>
+                            </div>
+
+                            <!-- Quick Image Replace Overlay (Allows user to swap with local file easily) -->
+                            <label for="imageUploadInput" class="img-upload-badge"
+                                title="Click to replace with your photo">
+                                <i class="fa-solid fa-camera"></i>
+                                <input type="file" id="imageUploadInput" accept="image/*" class="visually-hidden">
+                            </label>
+                        </div>
+
+                        <!-- QUOTE BENEATH PHOTO (Explicit User Requirement) -->
+                        <div class="quote-card" id="userQuoteCard">
+                            <div class="quote-icon">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <blockquote class="quote-text">
+                                "continuous improvement beats delayed perfection"
+                            </blockquote>
+                            <div class="quote-author-tag">
+                                <span class="sparkle-star">✦</span> Personal Guiding Philosophy
+                            </div>
+                        </div>
+
+                        <!-- Left Corner Quick Badges -->
+                        <div class="left-quick-badges">
+                            <span class="badge-tag"><i class="fa-solid fa-feather"></i> Badminton Player</span>
+                            <span class="badge-tag"><i class="fa-solid fa-code"></i> Web Craftsman</span>
+                            <span class="badge-tag"><i class="fa-solid fa-book"></i> Avid Reader</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- RIGHT SIDE: Section About Me with Name & DOB (Explicit User Requirement) -->
+                <div class="hero-right-content" id="about">
+                    <div class="about-card-primary">
+
+                        <div class="greeting-bar">
+                            <span class="greeting-pill"><i class="fa-solid fa-hand-wave"></i> Welcome to my space</span>
+                            <span class="tag-university"><i class="fa-solid fa-building-columns"></i> ADYPU Pune</span>
+                        </div>
+
+                        <!-- NAME: SWASTIK SONI -->
+                        <h1 class="hero-name" id="userNameTitle">
+                            SWASTIK <span class="text-gradient">SONI</span>
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            B.Tech First Year Student &bull; Aspiring Software Engineer &bull; Badminton & Sports
+                            Athlete
+                        </p>
+
+                        <!-- Key Info Box: DOB & Age -->
+                        <div class="info-highlight-box">
+                            <div class="info-item">
+                                <div class="info-icon dob-icon">
+                                    <i class="fa-solid fa-cake-candles"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Date of Birth</span>
+                                    <span class="info-value" id="userDob">30-10-2007</span>
+                                </div>
+                            </div>
+
+                            <div class="info-divider"></div>
+
+                            <div class="info-item">
+                                <div class="info-icon age-icon">
+                                    <i class="fa-solid fa-hourglass-half"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Age</span>
+                                    <span class="info-value" id="calculatedAge">19 Years</span>
+                                </div>
+                            </div>
+
+                            <div class="info-divider"></div>
+
+                            <div class="info-item">
+                                <div class="info-icon location-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Location</span>
+                                    <span class="info-value">Pune, Maharashtra, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Narrative / About Bio -->
+                        <div class="about-narrative">
+                            <p>
+                                I am a first-year <strong>B.Tech</strong> undergraduate at <strong>Ajeenkya DY Patil
+                                    University</strong> driven by a curiosity for how systems work beneath the surface.
+                                From building clean, user-first web applications to untangling algorithmic problems, I
+                                love the craft of programming.
+                            </p>
+                            <p>
+                                When I’m away from the keyboard, you'll find me on the <strong>badminton court</strong>
+                                perfecting high-intensity smashes and footwork, exploring inspiring technical books, or
+                                training on the sports field. My discipline in sports translates directly into my code:
+                                consistent iterations, teamwork, and an obsession with daily progress.
+                            </p>
+                        </div>
+
+                        <!-- Interactive Metric Counters -->
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <span class="metric-number" data-target="1">1st</span>
+                                <span class="metric-label">Year B.Tech @ ADYPU</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-number" data-target="15">15+</span>
+                                <span class="metric-label">Projects & Snippets</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-number" data-target="250">250+</span>
+                                <span class="metric-label">Code Commits</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-number" data-target="100">100%</span>
+                                <span class="metric-label">Passion for Growth</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary" id="viewProjectsBtn">
+                                <i class="fa-solid fa-rocket"></i> Explore Projects
+                            </a>
+                            <a href="#education" class="btn btn-outline" id="viewEducationBtn">
+                                <i class="fa-solid fa-graduation-cap"></i> View Academic Journey
+                            </a>
+                            <button class="btn btn-ghost" id="quickContactBtn"
+                                onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                                <i class="fa-regular fa-envelope"></i> Message Me
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section class="section education-section" id="education">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fa-solid fa-school"></i> Academic Foundation</span>
+                    <h2 class="section-title">Education & Learning</h2>
+                    <p class="section-subtitle">Formal degree studies complemented by hands-on engineering challenges
+                        and active campus participation.</p>
+                </div>
+
+                <div class="education-timeline">
+                    <!-- Primary Card: ADYPU B.Tech First Year -->
+                    <div class="education-card active-degree">
+                        <div class="edu-badge-corner">
+                            <span class="current-tag"><i class="fa-solid fa-circle-check"></i> Currently Pursuing</span>
+                        </div>
+
+                        <div class="edu-header">
+                            <div class="edu-icon-box">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <div>
+                                <h3 class="edu-degree">Bachelor of Technology (B.Tech) — First Year</h3>
+                                <h4 class="edu-institution">Ajeenkya DY Patil University (ADYPU), Pune</h4>
+                                <div class="edu-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> 2025 – Present</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Lohegaon, Pune, India</span>
+                                    <span><i class="fa-solid fa-laptop-code"></i> Engineering & Technology</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edu-body">
+                            <p>
+                                Currently building foundational core strength in computational problem solving, data
+                                structures, discrete mathematics, and software systems. Actively taking part in
+                                university hackathons and collaborating on software projects while representing the
+                                institute in sports.
+                            </p>
+
+                            <div class="edu-highlights">
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Core Focus: Programming Fundamentals (C/C++, Python), Object-Oriented
+                                        Principles, Web Technologies</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>University Clubs: Active Member of Campus Coding Circle & University Badminton
+                                        Team</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Hands-on Engineering: Practical lab implementations, algorithms analysis, and
+                                        interactive peer projects</span>
+                                </div>
+                            </div>
+
+                            <div class="coursework-tags">
+                                <span class="course-chip">Data Structures Basics</span>
+                                <span class="course-chip">Object-Oriented Programming</span>
+                                <span class="course-chip">Engineering Mathematics</span>
+                                <span class="course-chip">Web Development</span>
+                                <span class="course-chip">Digital Electronics</span>
+                                <span class="course-chip">Linux & Shell Scripting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Card: High School / Pre-University Foundation -->
+                    <div class="education-card secondary-edu">
+                        <div class="edu-header">
+                            <div class="edu-icon-box sub-icon">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h3 class="edu-degree">Higher Secondary Education (Physics, Chemistry & Mathematics)
+                                </h3>
+                                <h4 class="edu-institution">Science & Computer Science Stream</h4>
+                                <div class="edu-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> Graduated with Strong Analytical
+                                        Aptitude</span>
+                                    <span><i class="fa-solid fa-medal"></i> Sports & Academic Honours</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edu-body">
+                            <p>
+                                Developed a strong mathematical and logical base with early exposure to computer science
+                                fundamentals, algorithm logic, and athletic discipline in competitive badminton.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fa-solid fa-code"></i> Developer Toolkit</span>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <p class="section-subtitle">Carefully honed technical abilities, modern web workflows, and
+                        foundational computer science skills.</p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="skill-tabs" id="skillTabs">
+                    <button class="skill-tab-btn active" data-filter="all">All Skills</button>
+                    <button class="skill-tab-btn" data-filter="frontend">Frontend & UI</button>
+                    <button class="skill-tab-btn" data-filter="backend">Backend & DB</button>
+                    <button class="skill-tab-btn" data-filter="languages">Languages</button>
+                    <button class="skill-tab-btn" data-filter="tools">Tools & DevOps</button>
+                    <button class="skill-tab-btn" data-filter="athletic">Athletic & Soft Skills</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid" id="skillsContainer">
+
+                    <!-- Languages -->
+                    <div class="skill-card" data-category="languages frontend">
+                        <div class="skill-top">
+                            <div class="skill-icon js-icon"><i class="fa-brands fa-js"></i></div>
+                            <span class="skill-level">Proficient</span>
+                        </div>
+                        <h4 class="skill-name">JavaScript (ES6+)</h4>
+                        <p class="skill-desc">Modern syntax, asynchronous logic (Promises, Async/Await), DOM
+                            manipulation, and functional patterns.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 88%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="languages">
+                        <div class="skill-top">
+                            <div class="skill-icon python-icon"><i class="fa-brands fa-python"></i></div>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <h4 class="skill-name">Python</h4>
+                        <p class="skill-desc">Data processing, scripting, algorithmic problem solving, and backend
+                            prototyping.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 82%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="languages">
+                        <div class="skill-top">
+                            <div class="skill-icon cpp-icon"><i class="fa-solid fa-code"></i></div>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <h4 class="skill-name">C / C++</h4>
+                        <p class="skill-desc">Memory management, pointers, object-oriented concepts, and core data
+                            structure implementations.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 78%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skill-card" data-category="frontend">
+                        <div class="skill-top">
+                            <div class="skill-icon html-icon"><i class="fa-brands fa-html5"></i></div>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <h4 class="skill-name">HTML5 & Semantic Web</h4>
+                        <p class="skill-desc">Accessible structures, SEO-friendly layouts, clean hierarchy, and HTML5
+                            Web APIs.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 92%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="frontend">
+                        <div class="skill-top">
+                            <div class="skill-icon css-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <h4 class="skill-name">CSS3 & Responsive Design</h4>
+                        <p class="skill-desc">Flexbox, CSS Grid, custom properties, smooth transitions, keyframe
+                            animations, and mobile-first systems.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="frontend">
+                        <div class="skill-top">
+                            <div class="skill-icon react-icon"><i class="fa-brands fa-react"></i></div>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <h4 class="skill-name">React & Component UI</h4>
+                        <p class="skill-desc">Functional components, hooks (useState, useEffect), state lifecycles, and
+                            modular design.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Backend & Database -->
+                    <div class="skill-card" data-category="backend">
+                        <div class="skill-top">
+                            <div class="skill-icon node-icon"><i class="fa-brands fa-node-js"></i></div>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <h4 class="skill-name">Node.js & Express</h4>
+                        <p class="skill-desc">RESTful API development, JSON endpoints, middleware integration, and
+                            server routing.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 78%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="backend">
+                        <div class="skill-top">
+                            <div class="skill-icon sql-icon"><i class="fa-solid fa-database"></i></div>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <h4 class="skill-name">SQL & Databases</h4>
+                        <p class="skill-desc">Relational querying, schema design, basic MongoDB NoSQL CRUD operations,
+                            and indexing basics.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 76%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & DevOps -->
+                    <div class="skill-card" data-category="tools">
+                        <div class="skill-top">
+                            <div class="skill-icon git-icon"><i class="fa-brands fa-git-alt"></i></div>
+                            <span class="skill-level">Proficient</span>
+                        </div>
+                        <h4 class="skill-name">Git & GitHub</h4>
+                        <p class="skill-desc">Version control, branching strategies, commit cleanliness, pull requests,
+                            and collaborative code reviews.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 86%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="tools">
+                        <div class="skill-top">
+                            <div class="skill-icon cli-icon"><i class="fa-solid fa-terminal"></i></div>
+                            <span class="skill-level">Comfortable</span>
+                        </div>
+                        <h4 class="skill-name">Linux & CLI</h4>
+                        <p class="skill-desc">Bash navigation, file permissions, script automation, package management,
+                            and debugging tools.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Athletic & Soft Skills -->
+                    <div class="skill-card" data-category="athletic">
+                        <div class="skill-top">
+                            <div class="skill-icon badminton-skill-icon"><i class="fa-solid fa-feather-pointed"></i>
+                            </div>
+                            <span class="skill-level">High Energy</span>
+                        </div>
+                        <h4 class="skill-name">Badminton & Athletic Agility</h4>
+                        <p class="skill-desc">Fast reflexes, court strategy, tactical patience, high stamina, and
+                            pressure management under tournament stakes.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 95%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="athletic">
+                        <div class="skill-top">
+                            <div class="skill-icon team-icon"><i class="fa-solid fa-users-gear"></i></div>
+                            <span class="skill-level">Core Strength</span>
+                        </div>
+                        <h4 class="skill-name">Team Leadership & Tenacity</h4>
+                        <p class="skill-desc">Applying sportsmanship, continuous self-improvement, clear team
+                            communication, and resilient problem-solving.</p>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fa-solid fa-laptop-file"></i> Built with Code</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Real-world applications built to solve genuine student, sports, and
+                        developer workflows.</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1: ShuttleScore -->
+                    <article class="project-card">
+                        <div class="project-badge">
+                            <span class="sport-badge"><i class="fa-solid fa-feather"></i> Sports Tech</span>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">ShuttleScore — Smart Badminton Analytics & Match Tracker</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-description">
+                                An interactive web-based badminton match scoring and rally analysis tool. Allows
+                                athletes to log rally lengths, smash points, unforced errors, and court heatmaps with
+                                live audio announcements and match stats export.
+                            </p>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">JavaScript (ES6)</span>
+                                <span class="tech-tag">HTML5 Canvas</span>
+                                <span class="tech-tag">Web Audio API</span>
+                                <span class="tech-tag">LocalStorage</span>
+                            </div>
+
+                            <div class="project-highlights">
+                                <div><i class="fa-solid fa-check"></i> Real-time match scoring adhering to BWF 21-point
+                                    rules</div>
+                                <div><i class="fa-solid fa-check"></i> Visual error breakdown and point-by-point rally
+                                    graphs</div>
+                            </div>
+
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-primary project-demo-btn" data-project="shuttlescore">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo Preview
+                                </button>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: CampusSync -->
+                    <article class="project-card">
+                        <div class="project-badge">
+                            <span class="edu-badge"><i class="fa-solid fa-graduation-cap"></i> Student Hub</span>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">CampusSync — ADYPU Student Resource Exchange</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-description">
+                                A collaborative academic portal for engineering students at Ajeenkya DY Patil University
+                                to share verified lecture notes, laboratory manuals, question banks, and course roadmaps
+                                with peer ratings and tagging.
+                            </p>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">Vanilla JS</span>
+                                <span class="tech-tag">CSS Flex/Grid</span>
+                            </div>
+
+                            <div class="project-highlights">
+                                <div><i class="fa-solid fa-check"></i> Subject-wise cataloging for B.Tech First Year
+                                    syllabus</div>
+                                <div><i class="fa-solid fa-check"></i> Instant fuzzy search and peer-voted helpful notes
+                                </div>
+                            </div>
+
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-primary project-demo-btn" data-project="campussync">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo Preview
+                                </button>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: DevSnippet Vault -->
+                    <article class="project-card">
+                        <div class="project-badge">
+                            <span class="dev-badge"><i class="fa-solid fa-code"></i> Dev Tool</span>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">DevSnippet Vault — Markdown & Code Snippet Manager</h3>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <p class="project-description">
+                                A lightweight, distraction-free productivity app designed for developers to store,
+                                categorize, tag, and copy reusable code snippets with real-time syntax highlighting and
+                                instantaneous search filter.
+                            </p>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Prism.js</span>
+                                <span class="tech-tag">CSS3 Variables</span>
+                                <span class="tech-tag">Clipboard API</span>
+                            </div>
+
+                            <div class="project-highlights">
+                                <div><i class="fa-solid fa-check"></i> 1-click clipboard copy with feedback animation
+                                </div>
+                                <div><i class="fa-solid fa-check"></i> Multi-language tag indexing (C++, JS, Python,
+                                    Bash)</div>
+                            </div>
+
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-primary project-demo-btn" data-project="devsnippet">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo Preview
+                                </button>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: FitPulse Track -->
+                    <article class="project-card">
+                        <div class="project-badge">
+                            <span class="fitness-badge"><i class="fa-solid fa-heart-pulse"></i> Athletics &
+                                Health</span>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">FitPulse — Collegiate Athlete Training & Recovery Logger</h3>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <p class="project-description">
+                                A personal athletic tracker tailored for collegiate athletes balancing academic loads
+                                with sports training routines. Visualizes sprint times, jump metrics, resting heart
+                                rates, and hydration goals.
+                            </p>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS Keyframes</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Chart.js</span>
+                            </div>
+
+                            <div class="project-highlights">
+                                <div><i class="fa-solid fa-check"></i> Interactive weekly workout cadence and recovery
+                                    score</div>
+                                <div><i class="fa-solid fa-check"></i> Responsive mobile-friendly dashboard for
+                                    courtside logging</div>
+                            </div>
+
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-primary project-demo-btn" data-project="fitpulse">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo Preview
+                                </button>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTRIBUTIONS SECTION (Explicit User Requirement) -->
+        <section class="section contributions-section" id="contributions">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fa-solid fa-code-pull-request"></i> Giving Back</span>
+                    <h2 class="section-title">Contributions & Community Impact</h2>
+                    <p class="section-subtitle">Active contributions to open-source software, collegiate clubs, peer
+                        mentoring, and collegiate sports fests.</p>
+                </div>
+
+                <div class="contributions-grid">
+
+                    <!-- Open Source PR Card -->
+                    <div class="contrib-card">
+                        <div class="contrib-top">
+                            <div class="contrib-icon os-icon">
+                                <i class="fa-brands fa-github-alt"></i>
+                            </div>
+                            <span class="contrib-status"><i class="fa-solid fa-circle-check"></i> Merged</span>
+                        </div>
+                        <h3 class="contrib-title">Open Source Web Tools & Documentation</h3>
+                        <p class="contrib-desc">
+                            Contributed documentation clarifications, responsive CSS fixes, and modular helper functions
+                            to open-source student-oriented learning repositories and developer cheatsheets.
+                        </p>
+                        <div class="contrib-details">
+                            <div class="contrib-stat">
+                                <span class="num">12+</span>
+                                <span class="lbl">PRs & Issues</span>
+                            </div>
+                            <div class="contrib-stat">
+                                <span class="num">100%</span>
+                                <span class="lbl">Community Care</span>
+                            </div>
+                        </div>
+                        <div class="contrib-footer">
+                            <span class="tag-sub"><i class="fa-solid fa-tag"></i> Git & GitHub</span>
+                            <span class="tag-sub"><i class="fa-solid fa-tag"></i> Open Source</span>
+                        </div>
+                    </div>
+
+                    <!-- ADYPU Coding Club Peer Learning -->
+                    <div class="contrib-card">
+                        <div class="contrib-top">
+                            <div class="contrib-icon club-icon">
+                                <i class="fa-solid fa-people-roof"></i>
+                            </div>
+                            <span class="contrib-status active-status"><i class="fa-solid fa-bolt"></i> Ongoing</span>
+                        </div>
+                        <h3 class="contrib-title">ADYPU Student Peer Coding & Study Groups</h3>
+                        <p class="contrib-desc">
+                            Organized peer study circles at Ajeenkya DY Patil University assisting fellow freshmen with
+                            Git basics, problem solving in C/C++, and building their very first web pages.
+                        </p>
+                        <div class="contrib-details">
+                            <div class="contrib-stat">
+                                <span class="num">35+</span>
+                                <span class="lbl">Peers Assisted</span>
+                            </div>
+                            <div class="contrib-stat">
+                                <span class="num">6+</span>
+                                <span class="lbl">Study Sessions</span>
+                            </div>
+                        </div>
+                        <div class="contrib-footer">
+                            <span class="tag-sub"><i class="fa-solid fa-tag"></i> Mentorship</span>
+                            <span class="tag-sub"><i class="fa-solid fa-tag"></i> University</span>
+                        </div>
+                    </div>
+
+                    <!-- Campus Sports & Badminton Tournament Coordination -->
+                    <div class="contrib-card">
+                        <div class="contrib-top">
+                            <div class="contrib-icon sports-icon">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <span class="contrib-status"><i class="fa-solid fa-star"></i> Leadership</span>
+                        </div>
+                        <h3 class="contrib-title">University Sports & Badminton Coordination</h3>
+                        <p class="contrib-desc">
+                            Coordinated intra-college badminton trials and match fixture scoring for freshman sports
+                            week. Promoted collegiate sportsmanship, court refereeing, and fitness routines.
+                        </p>
+                        <div class="contrib-details">
+                            <div class="contrib-stat">
+                                <span class="num">40+</span>
+                                <span class="lbl">Matches Refereed</span>
+                            </div>
+                            <div class="contrib-stat">
+                                <span class="num">Top 4</span>
+                                <span class="lbl">Tournament Finish</span>
+                            </div>
+                        </div>
+                        <div class="contrib-footer">
+                            <span class="tag-sub"><i class="fa-solid fa-tag"></i> Badminton</span>
+                            <span class="tag-sub"><i class="fa-solid fa-tag"></i> Sports Fest</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Contribution Heatmap Simulator -->
+                <div class="heatmap-container">
+                    <div class="heatmap-header">
+                        <div>
+                            <h4 class="heatmap-title"><i class="fa-solid fa-calendar-check"></i> Activity & Contribution
+                                Heatmap</h4>
+                            <p class="heatmap-subtitle">Visualizing steady coding habits and daily improvement
+                                milestones.</p>
+                        </div>
+                        <div class="heatmap-legend">
+                            <span>Less</span>
+                            <span class="cell lvl-0"></span>
+                            <span class="cell lvl-1"></span>
+                            <span class="cell lvl-2"></span>
+                            <span class="cell lvl-3"></span>
+                            <span class="cell lvl-4"></span>
+                            <span>More</span>
+                        </div>
+                    </div>
+
+                    <div class="heatmap-grid" id="heatmapGrid" title="Hover over cells to see activity count">
+                        <!-- Populated via script.js -->
+                    </div>
+                    <div class="heatmap-summary" id="heatmapSummary">
+                        <span><strong>284 contributions</strong> recorded across this academic year.</span>
+                        <span class="streak-badge"><i class="fa-solid fa-fire"></i> Current Streak: 19 Days</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get in Touch</span>
+                    <h2 class="section-title">Let's Connect & Collaborate</h2>
+                    <p class="section-subtitle">Whether it's discussing an innovative tech project, an internship
+                        opportunity, or a friendly match of badminton — my inbox is always open!</p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <!-- Contact Info Card -->
+                    <div class="contact-info-card">
+                        <h3 class="contact-card-title">Contact Information</h3>
+                        <p class="contact-card-desc">
+                            Feel free to reach out via email, social networks, or drop a quick message using the form.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span class="method-label">Email</span>
+                                    <a href="mailto:swastik.soni@example.com"
+                                        class="method-link">swastik.soni@example.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div>
+                                    <span class="method-label">Institution</span>
+                                    <span class="method-text">Ajeenkya DY Patil University, Pune</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <span class="method-label">Residence</span>
+                                    <span class="method-text">Pune, Maharashtra, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="social-links-box">
+                            <span class="social-label">Find Me Online:</span>
+                            <div class="social-icons">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    class="social-circle" title="GitHub" aria-label="GitHub Profile">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                    class="social-circle" title="LinkedIn" aria-label="LinkedIn Profile">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                                    class="social-circle" title="X / Twitter" aria-label="Twitter Profile">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                                    class="social-circle" title="Instagram" aria-label="Instagram Profile">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Personal Motto Callout -->
+                        <div class="motto-callout">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>Continuous improvement beats delayed perfection.</p>
+                            <span>— Swastik Soni</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="senderName" class="form-label">Your Name <span
+                                            class="required">*</span></label>
+                                    <input type="text" id="senderName" class="form-input"
+                                        placeholder="e.g. Rahul Sharma" required>
+                                    <span class="form-error" id="nameError">Please enter your name.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="senderEmail" class="form-label">Email Address <span
+                                            class="required">*</span></label>
+                                    <input type="email" id="senderEmail" class="form-input"
+                                        placeholder="e.g. rahul@example.com" required>
+                                    <span class="form-error" id="emailError">Please enter a valid email address.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="senderSubject" class="form-label">Subject</label>
+                                <input type="text" id="senderSubject" class="form-input"
+                                    placeholder="e.g. Project Collaboration / Badminton Match / Hello">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="senderMessage" class="form-label">Message <span
+                                        class="required">*</span></label>
+                                <textarea id="senderMessage" class="form-textarea" rows="5"
+                                    placeholder="Share your message or idea here..." required></textarea>
+                                <span class="form-error" id="messageError">Please write a brief message.</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="submitContactBtn">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+
+                        <div class="form-feedback" id="formFeedback">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Thank you! Your message has been sent successfully. Swastik will get back to you
+                                soon.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Project Preview Modal -->
+    <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="modal-tag" id="modalTag">Category</span>
+                <h3 class="modal-title" id="modalTitle">Project Title</h3>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Injected via script.js -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline btn-sm" id="modalDismissBtn">Close</button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"
+                    id="modalRepoBtn">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+        <i class="fa-solid fa-circle-info toast-icon"></i>
+        <span class="toast-message" id="toastMessage">Notification</span>
+    </div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <span class="footer-brand">&lt;Swastik Soni /&gt;</span>
+                <p class="footer-copy">B.Tech First Year &bull; Ajeenkya DY Patil University &bull; Born 30-10-2007</p>
+            </div>
+            <div class="footer-center">
+                <p class="footer-quote">"Continuous improvement beats delayed perfection"</p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; <span id="currentYearSpan">2026</span> Swastik Soni. Built with pride using HTML, CSS & JS.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
